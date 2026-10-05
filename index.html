@@ -1,6 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shigeyuki Sato - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #222;
+            --sub-text: #666;
+            --border-color: #e0e0e0;
+            --card-bg: #fff;
+            --accent-color: #333;
+        }
 
-<h1>佐藤成行がこれまでつくったもの</h1>
-今工事中です
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-つくったものを見たい方は以下のリンクを踏んでください
-https://konnitiwasekai.tumblr.com/
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            color: var(--sub-text);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--card-bg);
+        }
+
+        nav a {
+            color: var(--sub-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            letter-spacing: 0.03em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0 0 8px;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--sub-text);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: var(--sub-text);
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 20px 20px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shigeyuki Sato</h1>
+        <p>佐藤成行がこれまでのつくったもの</p>
+    </header>
+
+    <nav>
+        <a href="#performance">演劇</a>
+        <a href="#making">ものづくり</a>
+        <a href="#virtual">バーチャル</a>
+        <a href="#activity">活動</a>
+        <a href="#link">リンク</a>
+    </nav>
+
+    <main>
+        <!-- 演劇カテゴリ -->
+        <section id="performance">
+            <h2>演劇</h2>
+            <div class="grid">
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=1" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">ポストドラマ作品タイトル</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。舞台演出やドラマトゥルギーに関する実践的なアプローチと空間構成についての記録です。</p>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=2" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">空間演出・インスタレーション</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。身体表現とテクノロジーを融合させたパフォーマンス空間の設計について。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ものづくりカテゴリ -->
+        <section id="making">
+            <h2>ものづくり</h2>
+            <div class="grid">
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=3" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">カスタムマクロキーパッド</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。Raspberry Pi PicoとArduinoIDEを用いて自作した4ボタンのUSB入力デバイス。</p>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=4" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">デジタルファブリケーション</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。3Dプリンターや電子工作を組み合わせた試作プロセスの実験的プロダクト。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- バーチャルカテゴリ -->
+        <section id="virtual">
+            <h2>バーチャル</h2>
+            <div class="grid">
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=5" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">clusterワールド制作</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。BlenderとUnityを活用して構築したバーチャル空間のデザインと実装。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 活動カテゴリ -->
+        <section id="activity">
+            <h2>活動</h2>
+            <div class="grid">
+                <a href="#" class="card">
+                    <img src="https://picsum.photos/600/400?random=6" alt="作品サムネイル" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">OSCトントン相撲</h3>
+                        <p class="card-desc">ここに50文字程度のテキストが入ります。物理的な振動モーターとclusterを連携させたインタラクティブな遠隔相撲システム。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Shigeyuki Sato All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
